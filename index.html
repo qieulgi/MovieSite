@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>The Substance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    body {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
       color: #fff;
-      overflow-x: hidden;
-      background: url('Untitled design (5).png') no-repeat center top;
+      background: url('Untitled design (5).png') repeat;
       background-size: cover;
-      background-attachment: scroll;
+      overflow-y: auto;
     }
 
-    /* HEADER IMAGE */
     header {
       position: relative;
       width: 100%;
+      z-index: 2; /* Ensures goo image is above video */
     }
 
     header img {
@@ -32,31 +31,29 @@
       display: block;
     }
 
-    /* STICKY NAV BAR ON TOP OF HEADER IMAGE */
-    .nav-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
+    /* FLOATING BLACK BOX NAV BAR */
     nav {
       position: absolute;
       top: 20px;
-      right: 40px;
-      background: rgba(0, 255, 0, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 30px;
-      padding: 10px 20px;
+      right: 20px;
+      z-index: 10;
+      background-color: #000;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .nav-toggle {
       background-color: #00ff00;
       color: #000;
-      padding: 10px 20px;
+      padding: 8px 16px;
       border: none;
-      border-radius: 20px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       transition: transform 0.2s ease;
     }
@@ -70,14 +67,14 @@
       display: none;
       flex-direction: column;
       align-items: flex-end;
-      gap: 10px;
+      gap: 8px;
     }
 
     .nav-menu a {
       color: #000;
       background-color: #00ff00;
-      padding: 10px 15px;
-      border-radius: 15px;
+      padding: 8px 12px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s, transform 0.3s;
@@ -90,26 +87,16 @@
 
     .show-menu {
       display: flex;
-      animation: goo-drip 0.6s ease forwards;
     }
 
-    @keyframes goo-drip {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px) scaleY(0.5);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scaleY(1);
-      }
-    }
-
-    /* VIDEO SECTION */
+    /* VIDEO SECTION TUCKED UNDER GOO */
     .video-container {
-      margin-top: 40px;
+      margin-top: -100px; /* pull video up under the goo */
       display: flex;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 0 20px 40px;
+      position: relative;
+      z-index: 1;
     }
 
     iframe {
@@ -120,10 +107,10 @@
       border-radius: 12px;
     }
 
-    /* CONTENT SECTIONS */
+    /* SPACING FOR ANCHORS */
     section {
+      height: 600px;
       padding: 60px 20px;
-      min-height: 400px;
     }
 
     /* RESPONSIVE DESIGN */
@@ -131,15 +118,16 @@
       nav {
         top: 10px;
         right: 10px;
+        padding: 8px;
       }
 
       .nav-toggle {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 14px;
+        padding: 6px 12px;
       }
 
-      .nav-menu {
-        align-items: center;
+      .nav-menu a {
+        font-size: 14px;
       }
 
       iframe {
@@ -150,24 +138,22 @@
 </head>
 <body>
 
-  <!-- HEADER IMAGE WITH NAV ON TOP -->
+  <!-- HEADER with IMAGE and NAV -->
   <header>
     <img src="THE SUBSTANCE.png" alt="The Substance Header">
-    <div class="nav-wrapper">
-      <nav>
-        <button class="nav-toggle" onclick="toggleMenu()">☰ MENU</button>
-        <div class="nav-menu" id="navMenu">
-          <a href="#home">Home</a>
-          <a href="#trailer">Trailer</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#merch">Merch</a>
-          <a href="#about">About</a>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <button class="nav-toggle" onclick="toggleMenu()">☰ MENU</button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#merch">Merch</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- VIDEO BELOW HEADER IMAGE -->
+  <!-- VIDEO SECTION -->
   <div class="video-container" id="trailer">
     <iframe
       src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
@@ -209,3 +195,4 @@
 
 </body>
 </html>
+
