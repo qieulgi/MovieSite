@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <title>The Substance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official site for The Substance. Watch the trailer, explore the gallery, grab merch, and learn more." />
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -31,7 +36,7 @@
       display: block;
     }
 
-    /* FLOATING BLACK BOX NAV BAR */
+    /* NAVIGATION STYLES */
     nav {
       position: absolute;
       top: 20px;
@@ -46,8 +51,8 @@
     }
 
     .nav-toggle {
-      background-color: #00ff00;
-      color: #000;
+      background-color: #000;
+      color: #fff;
       padding: 8px 16px;
       border: none;
       border-radius: 8px;
@@ -70,8 +75,8 @@
     }
 
     .nav-menu a {
-      color: #000;
-      background-color: #00ff00;
+      color: #fff;
+      background-color: #000;
       padding: 8px 12px;
       border-radius: 8px;
       text-decoration: none;
@@ -80,7 +85,7 @@
     }
 
     .nav-menu a:hover {
-      background-color: #ccff00;
+      background-color: #333;
       transform: scale(1.05) rotate(-1deg);
     }
 
@@ -88,9 +93,9 @@
       display: flex;
     }
 
-    /* VIDEO SECTION TUCKED UNDER GOO */
+    /* VIDEO SECTION */
     .video-container {
-      margin-top: -160px; /* Tucked even tighter under goo */
+      margin-top: -200px;
       display: flex;
       justify-content: center;
       padding: 0 20px 40px;
@@ -99,14 +104,14 @@
     }
 
     iframe {
-      width: 90%;
-      max-width: 960px;
-      height: 540px;
-      border: none; /* No green border */
+      width: 95%;
+      max-width: 1280px;
+      height: 720px;
+      border: none;
       border-radius: 12px;
     }
 
-    /* SPACING FOR ANCHORS */
+    /* SECTION STYLING */
     section {
       height: 600px;
       padding: 60px 20px;
@@ -131,6 +136,7 @@
 
       iframe {
         height: 300px;
+        width: 100%;
       }
     }
   </style>
@@ -139,7 +145,7 @@
 
   <!-- HEADER with IMAGE and NAV -->
   <header>
-    <img src="THE SUBSTANCE.png" alt="The Substance Header">
+    <img src="THE SUBSTANCE.png" alt="The Substance movie title logo">
     <nav>
       <button class="nav-toggle" onclick="toggleMenu()">☰ MENU</button>
       <div class="nav-menu" id="navMenu">
@@ -194,7 +200,3 @@
 
 </body>
 </html>
-
-</body>
-</html>
-
