@@ -48,10 +48,10 @@
     }
 
     .nav-toggle {
-      background-color: #000; /* Fully black */
+      background-color: #000;
       color: #fff;
       padding: 8px 16px;
-      border: 2px solid #fff; /* Optional: white outline */
+      border: 2px solid #fff;
       border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
@@ -60,7 +60,7 @@
     }
 
     .nav-toggle:hover {
-      background-color: #222; /* Darker on hover */
+      background-color: #222;
       transform: scale(1.05);
     }
 
@@ -91,12 +91,11 @@
       display: flex;
     }
 
-    /* VIDEO SECTION */
     .video-container {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 ratio */
-      margin-top: -5px; /* remove gap under header */
+      padding-top: 56.25%;
+      margin-top: -5px;
       z-index: 1;
     }
 
@@ -111,6 +110,22 @@
 
     section {
       padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .gallery-image {
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
     }
 
     @media (max-width: 768px) {
@@ -148,7 +163,7 @@
     </nav>
   </header>
 
-  <!-- YOUTUBE VIDEO -->
+  <!-- VIDEO -->
   <div class="video-container" id="trailer">
     <iframe 
       src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ" 
@@ -158,28 +173,31 @@
     </iframe>
   </div>
 
-  <!-- CONTENT SECTIONS -->
+  <!-- HOME SECTION -->
   <section id="home">
-    <h2>Home</h2>
+    <h2>HOME</h2>
     <p>Welcome to The Substance...</p>
   </section>
 
+  <!-- GALLERY SECTION -->
   <section id="gallery">
-    <h2>Gallery</h2>
-    <p>Visuals coming soon...</p>
+    <h2>GALLERY</h2>
+    <img src="gallery.png" alt="Gallery from The Substance" class="gallery-image">
   </section>
 
+  <!-- MERCH SECTION -->
   <section id="merch">
-    <h2>Merch</h2>
+    <h2>MERCH</h2>
     <p>Support the experiment. Gear up.</p>
   </section>
 
+  <!-- ABOUT SECTION -->
   <section id="about">
-    <h2>About</h2>
+    <h2>ABOUT</h2>
     <p>This is the story of The Substance...</p>
   </section>
 
-  <!-- JS TOGGLE -->
+  <!-- TOGGLE MENU SCRIPT -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById("navMenu");
@@ -189,4 +207,5 @@
 
 </body>
 </html>
+
 
