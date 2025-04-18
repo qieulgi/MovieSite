@@ -91,22 +91,23 @@
       margin-top: -5px;
       display: flex;
       justify-content: center;
-      padding: 0 20px 60px;
+      padding: 0;
       position: relative;
       z-index: 1;
     }
 
     iframe {
-      width: 100%;
+      width: 100vw;
+      height: 56.25vw;
       max-width: 960px;
-      height: 540px;
+      max-height: 540px;
       border: none;
       border-radius: 12px;
     }
 
     section {
       padding: 80px 20px;
-      min-height: 600px;
+      min-height: 100vh;
       text-align: center;
     }
 
@@ -117,7 +118,6 @@
     }
 
     .content-box {
-      background-color: rgba(0, 0, 0, 0.7);
       padding: 30px;
       border-radius: 12px;
       max-width: 800px;
@@ -125,9 +125,18 @@
     }
 
     .gallery-image {
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 0;
+      margin-top: 20px;
+      display: block;
+    }
+
+    .about-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      display: block;
     }
 
     @media (max-width: 768px) {
@@ -147,7 +156,7 @@
       }
 
       iframe {
-        height: 300px;
+        height: 56.25vw;
       }
 
       section h2 {
@@ -194,12 +203,30 @@
 
   <section id="gallery">
     <h2>GALLERY</h2>
-    <div class="content-box">
-      <img src="gallery.png" alt="Gallery from The Substance" class="gallery-image">
-    </div>
+    <img src="THE SUBSTANCE (1).png" alt="Gallery from The Substance" class="gallery-image">
   </section>
 
   <section id="merch">
     <h2>MERCH</h2>
     <div class="content-box">
-      <p>Support the experiment. Gear up in custom merch
+      <p>Support the experiment. Gear up in custom merch inspired by The Substance.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>ABOUT</h2>
+    <img src="elisue.png" alt="Elisabeth Sparkle" class="about-image">
+    <div class="content-box">
+      <p>Elisabeth Sparkle is a former A-lister past her prime who is suddenly fired from her fitness TV show. She is then drawn to the opportunity presented by a mysterious new drug: THE SUBSTANCE. All it takes is one injection and she is reborn -- temporarily -- as the gorgeous, twentysomething Sue. The only rule? Time needs to be split: exactly one week in one body, then one week in the other. No exceptions. A perfect balance. What could go wrong?</p>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show-menu");
+    }
+  </script>
+
+</body>
+</html>
