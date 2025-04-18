@@ -14,7 +14,7 @@
       padding: 0;
       font-family: 'Arial', sans-serif;
       color: #fff;
-      background: url('tile.png') repeat;
+      background: url('tile.jpg') repeat;
       background-size: cover;
       overflow-x: hidden;
     }
