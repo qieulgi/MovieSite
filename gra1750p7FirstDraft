@@ -88,19 +88,23 @@
     }
 
     .video-container {
-      margin-top: -5px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 0;
-      position: relative;
-      z-index: 1;
+      align-items: center;
+      background-color: black;
+      z-index: 0;
     }
 
     iframe {
-      width: 100vw;
-      height: 56.25vw;
-      max-width: 960px;
-      max-height: 540px;
+      width: 90vw;
+      height: 50.625vw;
+      max-width: 1440px;
+      max-height: 810px;
       border: none;
       border-radius: 12px;
     }
@@ -109,6 +113,8 @@
       padding: 80px 20px;
       min-height: 100vh;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     section h2 {
@@ -132,12 +138,33 @@
       display: block;
     }
 
-    .about-image {
-      width: 60%;
-      max-width: 500px;
+    .about-box {
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      max-width: 100%;
+      padding: 100px 60px;
+      box-sizing: border-box;
+    }
+
+    .about-box img {
+      width: 100%;
+      max-width: 900px;
       height: auto;
-      margin: 0 auto 20px;
-      display: block;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    .about-box .about-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      font-size: 22px;
+      line-height: 1.8;
     }
 
     @media (max-width: 768px) {
@@ -168,13 +195,32 @@
         padding: 20px;
       }
 
-      .about-image {
-        width: 90%;
+      .about-box {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .about-box img {
+        max-width: 100%;
+      }
+
+      .about-box .about-text {
+        padding: 10px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
+
+  <div class="video-container" id="trailer">
+    <iframe
+      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
+      title="The Substance Trailer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 
   <header>
     <img src="THE SUBSTANCE.png" alt="The Substance Header">
@@ -189,15 +235,6 @@
       </div>
     </nav>
   </header>
-
-  <div class="video-container" id="trailer">
-    <iframe
-      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
-      title="The Substance Trailer"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
 
   <section id="home">
     <h2>HOME</h2>
@@ -220,9 +257,9 @@
 
   <section id="about">
     <h2>ABOUT</h2>
-    <div style="background-color: white; color: black; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; border-radius: 12px; max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
-      <img src="elisue3.png" alt="Transformation from The Substance" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 10px;">
-      <div style="flex: 1; min-width: 250px; padding: 20px;">
+    <div class="about-box">
+      <img src="elisue3.png" alt="Transformation from The Substance">
+      <div class="about-text">
         <p>Elisabeth Sparkle is a former A-lister past her prime who is suddenly fired from her fitness TV show. She is then drawn to the opportunity presented by a mysterious new drug: THE SUBSTANCE. All it takes is one injection and she is reborn — temporarily — as the gorgeous, twentysomething Sue. The only rule? Time needs to be split: exactly one week in one body, then one week in the other. No exceptions. A perfect balance. What could go wrong?</p>
       </div>
     </div>
