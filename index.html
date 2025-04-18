@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <title>The Substance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official site for The Substance." />
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -15,13 +16,10 @@
     }
 
     body {
-      margin: 0;
-      padding: 0;
       font-family: 'Arial', sans-serif;
       color: #fff;
       background: url('Untitled design (5).png') repeat;
       background-size: cover;
-      overflow-y: auto;
     }
 
     header {
@@ -50,18 +48,19 @@
     }
 
     .nav-toggle {
-      background-color: #000;
+      background-color: #000; /* Fully black */
       color: #fff;
       padding: 8px 16px;
-      border: none;
+      border: 2px solid #fff; /* Optional: white outline */
       border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
     .nav-toggle:hover {
+      background-color: #222; /* Darker on hover */
       transform: scale(1.05);
     }
 
@@ -92,26 +91,25 @@
       display: flex;
     }
 
-    /* Video Section Fix */
+    /* VIDEO SECTION */
     .video-container {
-      margin-top: -20vh;
-      display: flex;
-      justify-content: center;
-      padding: 0 20px 40px;
       position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 ratio */
+      margin-top: -5px; /* remove gap under header */
       z-index: 1;
     }
 
-    iframe {
-      width: 95%;
-      max-width: 1280px;
-      height: 720px;
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
-      border-radius: 12px;
     }
 
     section {
-      height: 600px;
       padding: 60px 20px;
     }
 
@@ -130,20 +128,12 @@
       .nav-menu a {
         font-size: 14px;
       }
-
-      iframe {
-        height: 300px;
-        width: 100%;
-      }
-
-      .video-container {
-        margin-top: -10vh;
-      }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <img src="THE SUBSTANCE.png" alt="The Substance movie title logo">
     <nav>
@@ -158,16 +148,17 @@
     </nav>
   </header>
 
+  <!-- YOUTUBE VIDEO -->
   <div class="video-container" id="trailer">
-    <iframe
-      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
+    <iframe 
+      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ" 
       title="The Substance Trailer"
-      frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 
+  <!-- CONTENT SECTIONS -->
   <section id="home">
     <h2>Home</h2>
     <p>Welcome to The Substance...</p>
@@ -188,6 +179,7 @@
     <p>This is the story of The Substance...</p>
   </section>
 
+  <!-- JS TOGGLE -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById("navMenu");
@@ -197,3 +189,4 @@
 
 </body>
 </html>
+
