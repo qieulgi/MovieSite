@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Substance</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1366px;
+      height: 1024px;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    header {
+      position: relative;
+      z-index: 2;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      z-index: 3;
+    }
+
+    .nav-toggle {
+      background-color: #00ff00;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ff00;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-menu {
+      margin-top: 10px;
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      animation: drip 0.5s ease-out forwards;
+    }
+
+    .nav-menu a {
+      color: #000;
+      background-color: #00ff00;
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .nav-menu a:hover {
+      background-color: #ccff00;
+      transform: scale(1.05) rotate(-1deg);
+    }
+
+    .show-menu {
+      display: flex;
+      animation: goo-drip 0.6s ease forwards;
+    }
+
+    @keyframes goo-drip {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px) scaleY(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+      }
+    }
+
+    /* VIDEO */
+    .video-container {
+      position: relative;
+      z-index: 1;
+      margin-top: -100px;
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 960px;
+      height: 540px;
+      border: 4px solid #00ff00;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00ff00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER with SLIME + NAV -->
+  <header>
+    <img src="THE SUBSTANCE.png" alt="The Substance Header">
+
+    <!-- Gooey Nav -->
+    <nav>
+      <button class="nav-toggle" onclick="toggleMenu()">☰ MENU</button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#merch">Merch</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- VIDEO EMBED SECTION -->
+  <div class="video-container" id="trailer">
+    <iframe
+      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
+      title="The Substance Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Optional sections to connect menu anchors -->
+  <section id="home"></section>
+  <section id="gallery"></section>
+  <section id="merch"></section>
+  <section id="about"></section>
+
+  <!-- JS to toggle menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show-menu");
+    }
+  </script>
+
+</body>
+</html>
