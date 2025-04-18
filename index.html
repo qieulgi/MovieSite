@@ -28,13 +28,7 @@
       align-items: center;
       background-color: black;
       z-index: 1;
-      padding-top: 60px;
-      opacity: 1;
-      transition: opacity 0.8s ease;
-    }
-
-    .video-container.fade-out {
-      opacity: 0;
+      padding-top: 20px;
     }
 
     iframe {
@@ -279,12 +273,6 @@
       const menu = document.getElementById("navMenu");
       menu.classList.toggle("show-menu");
     }
-
-    window.addEventListener("scroll", () => {
-      const videoContainer = document.querySelector(".video-container");
-      const scrollY = window.scrollY;
-      videoContainer.classList.toggle("fade-out", scrollY > 100);
-    });
   </script>
 
 </body>
