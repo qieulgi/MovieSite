@@ -133,9 +133,10 @@
     }
 
     .about-image {
-      width: 100%;
+      width: 60%;
+      max-width: 500px;
       height: auto;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
       display: block;
     }
 
@@ -165,6 +166,10 @@
 
       .content-box {
         padding: 20px;
+      }
+
+      .about-image {
+        width: 90%;
       }
     }
   </style>
@@ -230,3 +235,4 @@
 
 </body>
 </html>
+
