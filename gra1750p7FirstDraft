@@ -22,7 +22,7 @@
     header {
       position: relative;
       width: 100%;
-      z-index: 2; /* Ensures goo image is above video */
+      z-index: 2;
     }
 
     header img {
@@ -43,7 +43,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .nav-toggle {
@@ -91,7 +90,7 @@
 
     /* VIDEO SECTION TUCKED UNDER GOO */
     .video-container {
-      margin-top: -100px; /* pull video up under the goo */
+      margin-top: -160px; /* Tucked even tighter under goo */
       display: flex;
       justify-content: center;
       padding: 0 20px 40px;
@@ -103,7 +102,7 @@
       width: 90%;
       max-width: 960px;
       height: 540px;
-      border: 4px solid #00ff00;
+      border: none; /* No green border */
       border-radius: 12px;
     }
 
