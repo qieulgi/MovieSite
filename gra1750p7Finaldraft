@@ -27,12 +27,11 @@
       width: 100%;
       height: auto;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       background-color: black;
       z-index: 1;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 40px 20px;
     }
 
     iframe {
@@ -161,6 +160,7 @@
       box-sizing: border-box;
       border-radius: 20px;
       margin-top: 40px;
+      border: 5px solid #a9e106;
     }
 
     .about-box img {
@@ -262,14 +262,17 @@
     <div class="content-box"></div>
   </section>
 
-  <div class="video-container" id="trailer">
-    <iframe
-      src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
-      title="The Substance Trailer"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <section id="trailer">
+    <h2>TRAILER</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/LNlrGhBpYjc?si=um3_OnK51dOZokQQ"
+        title="The Substance Trailer"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
   <section id="about">
     <h2>ABOUT</h2>
