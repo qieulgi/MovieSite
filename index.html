@@ -159,12 +159,8 @@
       max-width: 100%;
       padding: 60px 60px;
       box-sizing: border-box;
-      border: 8px solid #a9e106;
       border-radius: 20px;
-      background-image: url('greenborder.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      margin-top: 40px;
     }
 
     .about-box img {
@@ -179,14 +175,22 @@
       flex: 1;
       min-width: 300px;
       padding: 20px;
-      font-size: 24px;
+      font-size: 26px;
       line-height: 1.8;
+      font-family: 'Geo', sans-serif;
     }
 
-    /* THIS is the new part you asked for: */
-    .about-box .about-text p {
+    .disclaimer-box {
+      background-color: #a9e106;
+      color: black;
+      margin: 60px auto 30px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
       font-family: 'Geo', sans-serif;
-      font-size: 22px;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     @media (max-width: 768px) {
@@ -228,12 +232,12 @@
 
       .about-box .about-text {
         padding: 10px;
-        font-size: 16px;
-      }
-      
-      /* Adjust paragraph font size a bit on small screens */
-      .about-box .about-text p {
         font-size: 18px;
+      }
+
+      .disclaimer-box {
+        font-size: 16px;
+        padding: 20px;
       }
     }
   </style>
@@ -281,6 +285,10 @@
     <h2>GALLERY</h2>
     <img src="gallery.png" alt="Gallery from The Substance" class="gallery-image">
   </section>
+
+  <div class="disclaimer-box">
+    <p>©2025, Meyli Roque-Martinez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </div>
 
   <script>
     function toggleMenu() {
