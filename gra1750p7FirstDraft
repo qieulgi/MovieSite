@@ -217,14 +217,13 @@
 <body>
 
   <header>
-    <img src="THE SUBSTANCE.png" alt="The Substance Header">
+    <img src="THE SUBSTANCE 2.png" alt="The Substance Header">
     <nav>
       <button class="nav-toggle" onclick="toggleMenu()">☰ MENU</button>
       <div class="nav-menu" id="navMenu">
         <a href="#home">Home</a>
         <a href="#trailer">Trailer</a>
         <a href="#gallery">Gallery</a>
-        <a href="#merch">Merch</a>
         <a href="#about">About</a>
       </div>
     </nav>
@@ -256,13 +255,6 @@
   <section id="gallery">
     <h2>GALLERY</h2>
     <img src="gallery.png" alt="Gallery from The Substance" class="gallery-image">
-  </section>
-
-  <section id="merch">
-    <h2>MERCH</h2>
-    <div class="content-box">
-      <p>Support the experiment. Gear up in custom merch inspired by The Substance.</p>
-    </div>
   </section>
 
   <script>
